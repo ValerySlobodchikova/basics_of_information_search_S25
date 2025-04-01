@@ -174,3 +174,5 @@ cython_debug/
 .pypirc
 downloaded_pages
 .idea
+
+.DS_Store

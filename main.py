@@ -4,14 +4,14 @@ from tqdm import tqdm
 
 INPUT_FILE = "sites.txt"  # Файл со списком сайтов
 OUTPUT_DIR = "downloaded_pages"  # Папка для сохранения
-INDEX_FILE = "index.txt"  # Файл с индексом
+INDEX_FILE = "index.txt"  # Файл формата номер -> ссылка на страницу
 
 # Создаем папку, если её нет
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Читаем список сайтов
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
-    urls = [line.strip() for line in f if line.strip()]
+    urls = [line.strip() for line in f]
 
 # Открываем индексный файл
 with open(INDEX_FILE, "w", encoding="utf-8") as index:
